@@ -31,6 +31,7 @@ namespace testTask1.Controllers
             {
                 return View(profile);
             }
+
             return HttpNotFound();
         }
 
