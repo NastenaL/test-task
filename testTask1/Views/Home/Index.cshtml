@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Список анкет</title>
+</head>
+<body>
+    <div>
+        <h3>Анкеты</h3>
+
+        <table>
+            <tr>
+                <td><p>Название</p></td>
+                <td><p>Дата создания</p></td>
+                <td><p>Кол-во просмотров</p></td>
+              
+            </tr>
+            @foreach (var p in ViewBag.Profile)
+            {
+                <tr>
+                    <td><p>@p.Name</p></td>
+                    <td><p>@p.CreateDate</p></td>
+                    <td><p>@p.Views</p></td>
+                    
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
