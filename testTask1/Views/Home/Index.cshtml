@@ -18,6 +18,7 @@
                 <td><p>Название</p></td>
                 <td><p>Дата создания</p></td>
                 <td><p>Кол-во просмотров</p></td>
+                <td></td>
               
             </tr>
             @foreach (var p in ViewBag.Profile)
@@ -26,7 +27,7 @@
                     <td><p>@p.Name</p></td>
                     <td><p>@p.CreateDate</p></td>
                     <td><p>@p.Views</p></td>
-                    
+                    <td><p><a href="/Home/Edit/@p.Id">EDIT</a></p></td>
                 </tr>
             }
         </table>
