@@ -18,11 +18,22 @@ namespace testTask1.Controllers
             return View();
         }
 
-        public ActionResult Edit()
+        [HttpGet]
+        public ActionResult EditProfile(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return HttpNotFound();
+            }
+            Profile profile = db.Profile.Find(id);
+        
+            if (profile != null)
+            {
+                return View(profile);
+            }
+            return HttpNotFound();
         }
 
-     
+
     }
 }
